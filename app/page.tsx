@@ -2,7 +2,7 @@
 
 import { AnimatedBackground } from "@/app/components/AnimatedBackground";
 import { ScrollProgress } from "@/app/components/ScrollProgress";
-import { CommandPalette } from "@/app/components/CommandPalette";
+import { NavDropdown } from "@/app/components/NavDropdown";
 
 import { Hero } from "@/app/sections/Hero";
 import { About } from "@/app/sections/About";
@@ -22,8 +22,8 @@ export default function Home() {
       {/* Scroll progress indicator */}
       <ScrollProgress />
 
-      {/* Command palette */}
-      <CommandPalette />
+      {/* Navigation Dropdown */}
+      <NavDropdown />
 
       {/* Main content */}
       <main className="relative z-10">
