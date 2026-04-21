@@ -6,8 +6,8 @@ export const personalInfo = {
   location: "Plainsboro, NJ",
   email: "raghavsathishmohan@gmail.com",
   phone: "(732)-447-6474",
-  linkedin: "linkedin.com/in/raghavsathishmohan",
-  github: "github.com/raghavmohan",
+  linkedin: "linkedin.com/raghavsathishmohan",
+  github: "github.com/RaghavSathishmohan",
 };
 
 export const aboutContent = {
@@ -72,7 +72,7 @@ export const projects = [
     ],
     techStack: ["TypeScript", "Node.js", "React", "Playwright", "AI"],
     links: {
-      github: "https://github.com/raghavmohan/career-ops",
+      github: "https://github.com/RaghavSathishmohan/career-ops",
       demo: null,
       caseStudy: null,
     },
@@ -204,8 +204,8 @@ export const githubRepos = [
 
 export const contactInfo = {
   email: "raghavsathishmohan@gmail.com",
-  linkedin: "https://linkedin.com/in/raghavsathishmohan",
-  github: "https://github.com/raghavmohan",
+  linkedin: "https://linkedin.com/raghavsathishmohan",
+  github: "https://github.com/RaghavSathishmohan",
   resumeUrl: "/resume.pdf",
 };
 
