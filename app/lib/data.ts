@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "raghavsathishmohan@gmail.com",
   phone: "(732)-447-6474",
   linkedin: "linkedin.com/in/raghavsathishmohan",
-  github: "github.com/RaghavSathishmohan",
+  github: "https://github.com/RaghavSathishmohan",
 };
 
 export const aboutContent = {
