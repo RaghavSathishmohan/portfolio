@@ -6,7 +6,7 @@ export const personalInfo = {
   location: "Plainsboro, NJ",
   email: "raghavsathishmohan@gmail.com",
   phone: "(732)-447-6474",
-  linkedin: "linkedin.com/in/raghavsathishmohan",
+  linkedin: "https://linkedin.com/in/raghavsathishmohan",
   github: "https://github.com/RaghavSathishmohan",
 };
 
