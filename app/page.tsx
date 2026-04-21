@@ -7,6 +7,7 @@ import { NavDropdown } from "@/app/components/NavDropdown";
 import { Hero } from "@/app/sections/Hero";
 import { About } from "@/app/sections/About";
 import { Projects } from "@/app/sections/Projects";
+import { Services } from "@/app/sections/Services";
 import { Experience } from "@/app/sections/Experience";
 import { Skills } from "@/app/sections/Skills";
 import { Education } from "@/app/sections/Education";
@@ -30,6 +31,7 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
+        <Services />
         <Experience />
         <Skills />
         <Education />

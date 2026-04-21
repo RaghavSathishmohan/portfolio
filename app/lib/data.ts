@@ -222,6 +222,7 @@ export const navSections = [
   { id: "hero", label: "Home", shortcut: "H" },
   { id: "about", label: "About", shortcut: "A" },
   { id: "projects", label: "Projects", shortcut: "P" },
+  { id: "services", label: "Services", shortcut: "V" },
   { id: "experience", label: "Experience", shortcut: "E" },
   { id: "skills", label: "Skills", shortcut: "S" },
   { id: "education", label: "Education", shortcut: "D" },
