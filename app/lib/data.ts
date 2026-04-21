@@ -186,7 +186,7 @@ export const education = {
 
 export const githubRepos = [
   {
-    name: "storepilot",
+    name: "StorePilotRebuild",
     description: "Inventory management SaaS for local stores. AI-powered analytics, demand forecasting, money leak detection.",
     language: "Python",
     stars: 0,
