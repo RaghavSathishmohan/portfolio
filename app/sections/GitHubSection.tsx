@@ -50,7 +50,7 @@ export function GitHubSection() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">
-                  github.com/raghavmohan
+                  {personalInfo.github.replace('https://', '')}
                 </h3>
                 <p className="text-muted-foreground mb-4">
                   Building AI-powered tools and automation systems
