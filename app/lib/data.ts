@@ -186,6 +186,14 @@ export const education = {
 
 export const githubRepos = [
   {
+    name: "storepilot",
+    description: "Inventory management SaaS for local stores. AI-powered analytics, demand forecasting, money leak detection.",
+    language: "Python",
+    stars: 0,
+    forks: 0,
+    topics: ["inventory-management", "saas", "ai", "analytics", "startup"],
+  },
+  {
     name: "career-ops",
     description: "Automated my job search because applying manually is painful",
     language: "TypeScript",
