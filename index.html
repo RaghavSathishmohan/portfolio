@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:#000000; --bg-soft:#0a0a0d; --text:#F4F4F4; --muted:#7a828f; --accent:#FF2A3D;
+  --bg:#000000; --bg-soft:#0a0a0d; --text:#F4F4F4; --muted:#7a828f; --accent:#E63E52;
   --panel:rgba(16,16,20,.6); --panel-b:rgba(120,120,132,.2);
   --mono:'JetBrains Mono',ui-monospace,monospace; --sans:'Inter',system-ui,sans-serif; --disp:'Space Grotesk',var(--sans);
 }
@@ -38,8 +38,8 @@ nav.scrolled{background:rgba(15,23,42,.9);border-bottom:1px solid var(--panel-b)
 .nav-links{display:flex;gap:22px;align-items:center}
 .nav-links a{font-family:var(--mono);font-size:13px;color:var(--muted);transition:.2s}
 .nav-links a:hover{color:var(--text)}
-.nav-links a.cta{color:var(--accent);border:1px solid rgba(255,42,61,.4);border-radius:8px;padding:6px 12px}
-.nav-links a.cta:hover{background:rgba(255,42,61,.12)}
+.nav-links a.cta{color:var(--accent);border:1px solid rgba(230,62,82,.4);border-radius:8px;padding:6px 12px}
+.nav-links a.cta:hover{background:rgba(230,62,82,.12)}
 .menu-btn{display:none;background:none;border:1px solid var(--panel-b);border-radius:8px;color:var(--text);padding:7px 10px;font-size:16px;cursor:pointer}
 
 main{position:relative;z-index:10}
@@ -53,9 +53,9 @@ h2.title{font-family:var(--disp);font-size:clamp(28px,4.6vw,46px);font-weight:70
 
 /* hero */
 .hero{align-items:flex-start}
-.hero .status{font-family:var(--mono);font-size:13px;color:var(--accent);display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid rgba(255,42,61,.3);border-radius:100px;background:rgba(255,42,61,.07);margin-bottom:26px}
+.hero .status{font-family:var(--mono);font-size:13px;color:var(--accent);display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid rgba(230,62,82,.3);border-radius:100px;background:rgba(230,62,82,.07);margin-bottom:26px}
 .hero .status .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,42,61,.5)}70%{box-shadow:0 0 0 9px rgba(255,42,61,0)}100%{box-shadow:0 0 0 0 rgba(255,42,61,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(230,62,82,.5)}70%{box-shadow:0 0 0 9px rgba(230,62,82,0)}100%{box-shadow:0 0 0 0 rgba(230,62,82,0)}}
 .hero h1{font-family:var(--disp);font-size:clamp(46px,9vw,108px);font-weight:700;letter-spacing:-.035em;line-height:.96;margin-bottom:16px;text-shadow:0 4px 50px rgba(15,23,42,.8)}
 .hero h1 .ac{color:var(--accent)}
 .hero .role{font-family:var(--mono);font-size:clamp(15px,2.3vw,21px);color:var(--muted);margin-bottom:24px;min-height:1.4em}
@@ -65,8 +65,8 @@ h2.title{font-family:var(--disp);font-size:clamp(28px,4.6vw,46px);font-weight:70
 .hero .lede b{color:var(--text);font-weight:600}
 .cta-row{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
 .btn{font-family:var(--mono);font-size:14px;font-weight:600;padding:13px 21px;border-radius:11px;display:inline-flex;align-items:center;gap:9px;transition:.22s;cursor:pointer;border:1px solid transparent}
-.btn.primary{background:var(--accent);color:#04121a;box-shadow:0 8px 30px rgba(255,42,61,.25)}
-.btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 42px rgba(255,42,61,.4)}
+.btn.primary{background:var(--accent);color:#04121a;box-shadow:0 8px 30px rgba(230,62,82,.25)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 42px rgba(230,62,82,.4)}
 .btn.ghost{border-color:var(--panel-b);color:var(--text);background:rgba(20,30,52,.4)}
 .btn.ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
 .hero .scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -75,6 +75,9 @@ h2.title{font-family:var(--disp);font-size:clamp(28px,4.6vw,46px);font-weight:70
 @keyframes sd{0%{opacity:0;top:7px}30%{opacity:1}60%{opacity:1}100%{opacity:0;top:20px}}
 
 /* about */
+.portrait-frame{width:232px;height:232px;margin:8px 0 34px;position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(230,62,82,.4);background:#000;box-shadow:0 0 46px rgba(230,62,82,.22)}
+.portrait-frame canvas{width:100%;height:100%;display:block}
+.portrait-frame::after{content:'';position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 42px rgba(230,62,82,.28);pointer-events:none}
 .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:start}
 .about-grid p{font-size:16.5px;color:#cdd5e3;margin-bottom:16px}
 .about-grid p b{color:var(--text);font-weight:600}
@@ -94,13 +97,13 @@ h2.title{font-family:var(--disp);font-size:clamp(28px,4.6vw,46px);font-weight:70
 /* work */
 .proj{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .card{overflow:hidden;transition:.28s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-5px);border-color:rgba(255,42,61,.45)}
+.card:hover{transform:translateY(-5px);border-color:rgba(230,62,82,.45)}
 .card.feature{grid-column:span 2}
 .win{display:flex;align-items:center;gap:7px;padding:12px 18px;border-bottom:1px solid var(--panel-b)}
 .win i{width:11px;height:11px;border-radius:50%;display:inline-block}
 .win .r{background:#ff5f57}.win .y{background:#febc2e}.win .g{background:#28c840}
 .win .path{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:8px}
-.win .badge{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(255,42,61,.3);border-radius:6px;padding:2px 8px}
+.win .badge{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(230,62,82,.3);border-radius:6px;padding:2px 8px}
 .card .body{padding:20px 22px;flex:1;display:flex;flex-direction:column}
 .card h3{font-family:var(--disp);font-size:21px;font-weight:600;margin-bottom:5px}
 .card .sub{font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:12px}
@@ -138,7 +141,7 @@ h2.title{font-family:var(--disp);font-size:clamp(28px,4.6vw,46px);font-weight:70
 footer{position:relative;z-index:10;text-align:center;padding:32px;border-top:1px solid var(--panel-b);font-family:var(--mono);font-size:12px;color:var(--muted)}
 footer .ac{color:var(--accent)}
 
-#proj-label{position:fixed;z-index:60;pointer-events:none;font-family:var(--mono);font-size:12px;color:var(--accent);background:rgba(15,23,42,.85);border:1px solid rgba(255,42,61,.35);border-radius:8px;padding:6px 11px;opacity:0;transition:opacity .2s;transform:translate(-50%,-140%)}
+#proj-label{position:fixed;z-index:60;pointer-events:none;font-family:var(--mono);font-size:12px;color:var(--accent);background:rgba(15,23,42,.85);border:1px solid rgba(230,62,82,.35);border-radius:8px;padding:6px 11px;opacity:0;transition:opacity .2s;transform:translate(-50%,-140%)}
 
 @media(max-width:820px){
   .nav-links{display:none}.menu-btn{display:block}
@@ -182,6 +185,7 @@ footer .ac{color:var(--accent)}
 <section id="about" class="reveal">
   <div class="eyebrow">01 / about</div>
   <h2 class="title">I build AI-native products,<br>not prototypes.</h2>
+  <div class="portrait-frame"><canvas id="portrait" aria-label="Abstract dot-matrix portrait of Raghav Sathishmohan"></canvas></div>
   <div class="about-grid">
     <div>
       <p>I started building because I got tired of watching good work drown in slow, manual processes — so I taught myself to ship, and haven't really stopped since. Two products later, the fun part isn't the code; it's watching something you built quietly hand someone back hours of their week.</p>
@@ -307,6 +311,28 @@ footer .ac{color:var(--accent)}
   document.querySelectorAll('.reveal').forEach(function(s){io.observe(s);});
   document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');});});
 
+  // ---- abstract dot-matrix portrait (2D canvas, runs regardless of WebGL) ----
+  (function(){
+    var pc=document.getElementById('portrait');if(!pc)return;
+    var DPR=Math.min(devicePixelRatio,2),S=232;pc.width=S*DPR;pc.height=S*DPR;
+    var ctx=pc.getContext('2d');ctx.scale(DPR,DPR);
+    var img=new Image();
+    img.onload=function(){
+      var W=118,H=118,off=document.createElement('canvas');off.width=W;off.height=H;
+      var octx=off.getContext('2d');octx.drawImage(img,0,0,W,H);var d;
+      try{d=octx.getImageData(0,0,W,H).data;}catch(e){var f0=document.querySelector('.portrait-frame');if(f0)f0.style.display='none';return;}
+      var cell=S/W;ctx.clearRect(0,0,S,S);
+      for(var y=0;y<H;y++){for(var x=0;x<W;x++){var i=(y*W+x)*4;
+        var lum=(0.299*d[i]+0.587*d[i+1]+0.114*d[i+2])/255,dk=1-lum;
+        if(dk<0.17)continue;
+        ctx.fillStyle='rgba(230,62,82,'+(0.26+dk*0.74)+')';
+        ctx.beginPath();ctx.arc(x*cell+cell/2,y*cell+cell/2,dk*cell*0.8,0,6.283);ctx.fill();
+      }}
+    };
+    img.onerror=function(){var f=document.querySelector('.portrait-frame');if(f)f.style.display='none';};
+    img.src='/public/images/profile.jpg';
+  })();
+
   function hideLoader(){var l=document.getElementById('loader');if(l)l.classList.add('hide');}
 
   if(reduced||!webglOK()){root.classList.add('reduced');setTimeout(hideLoader,300);return;}
@@ -321,19 +347,19 @@ footer .ac{color:var(--accent)}
   renderer.setSize(innerWidth,innerHeight);
   document.getElementById('webgl').appendChild(renderer.domElement);
 
-  var CY=new THREE.Color(0xFF2A3D), NAVY=new THREE.Color(0x000000);
+  var CY=new THREE.Color(0xE63E52), NAVY=new THREE.Color(0x000000);
 
   // ---- background gradient sphere (shader) ----
   var bgMat=new THREE.ShaderMaterial({
     side:THREE.BackSide,depthWrite:false,fog:false,
     uniforms:{uTime:{value:0}},
     vertexShader:'varying vec3 vP;void main(){vP=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
-    fragmentShader:'varying vec3 vP;uniform float uTime;void main(){vec3 n=normalize(vP);float g=n.y*0.5+0.5;vec3 base=vec3(0.0,0.0,0.0);vec3 glow=vec3(1.0,0.165,0.239);float radial=pow(1.0-abs(n.y),2.6);float pulse=0.13+0.06*sin(uTime*0.25);vec3 col=base+glow*(radial*pulse)+glow*0.015*g;gl_FragColor=vec4(col,1.0);}'
+    fragmentShader:'varying vec3 vP;uniform float uTime;void main(){vec3 n=normalize(vP);float g=n.y*0.5+0.5;vec3 base=vec3(0.0,0.0,0.0);vec3 glow=vec3(0.82,0.22,0.30);float radial=pow(1.0-abs(n.y),2.9);float pulse=0.09+0.04*sin(uTime*0.25);vec3 col=base+glow*(radial*pulse)+glow*0.010*g;gl_FragColor=vec4(col,1.0);}'
   });
   var bg=new THREE.Mesh(new THREE.SphereGeometry(90,32,32),bgMat);scene.add(bg);
 
   // ---- particle nebula (custom shader) ----
-  var COUNT=isMobile?1100:3200;
+  var COUNT=isMobile?900:2600;
   var pg=new THREE.BufferGeometry();
   var pos=new Float32Array(COUNT*3), scl=new Float32Array(COUNT);
   for(var i=0;i<COUNT;i++){
@@ -347,7 +373,7 @@ footer .ac{color:var(--accent)}
   pg.setAttribute('aScale',new THREE.BufferAttribute(scl,1));
   var pMat=new THREE.ShaderMaterial({
     transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,fog:false,
-    uniforms:{uTime:{value:0},uColor:{value:CY},uSize:{value:isMobile?42:60}},
+    uniforms:{uTime:{value:0},uColor:{value:CY},uSize:{value:isMobile?32:46}},
     vertexShader:'attribute float aScale;uniform float uTime;uniform float uSize;varying float vA;void main(){vec3 p=position;p.y+=sin(uTime*0.3+position.x*0.4)*0.4;p.x+=cos(uTime*0.2+position.z*0.3)*0.3;vec4 mv=modelViewMatrix*vec4(p,1.0);gl_Position=projectionMatrix*mv;gl_PointSize=uSize*aScale*(1.0/max(-mv.z,0.1));vA=clamp(1.0+mv.z*0.02,0.05,1.0);}',
     fragmentShader:'uniform vec3 uColor;varying float vA;void main(){vec2 c=gl_PointCoord-0.5;float d=length(c);float a=smoothstep(0.5,0.0,d)*vA;vec3 col=mix(uColor,vec3(1.0),0.3*(1.0-d));gl_FragColor=vec4(col,a);}'
   });
@@ -361,24 +387,28 @@ footer .ac{color:var(--accent)}
     fragmentShader:'uniform vec3 uColor;uniform float uOp;varying vec3 vN;varying vec3 vV;void main(){float f=pow(1.0-max(dot(vN,vV),0.0),2.2);vec3 col=mix(uColor*0.25,uColor,f);gl_FragColor=vec4(col,(0.10+f*0.9)*uOp);}'
   });}
 
-  // ---- floating hero shapes ----
-  var shapes=[];
-  function addShape(geo,x,y,z,s){var m=new THREE.Mesh(geo,fresnelMat(0xFF2A3D,0.85));m.position.set(x,y,z);m.scale.setScalar(s);
-    var wf=new THREE.LineSegments(new THREE.WireframeGeometry(geo),new THREE.LineBasicMaterial({color:0xFF2A3D,transparent:true,opacity:0.12}));m.add(wf);
-    m.userData.rot=[(Math.random()-.5)*0.004,(Math.random()-.5)*0.004,(Math.random()-.5)*0.003];
-    m.userData.baseY=y;m.userData.ph=Math.random()*6.28;scene.add(m);shapes.push(m);return m;}
-  addShape(new THREE.IcosahedronGeometry(1.6,0),4.5,1.5,2,1);
-  addShape(new THREE.OctahedronGeometry(1.1,0),-5,-2,-1,1);
-  addShape(new THREE.TorusGeometry(1,0.34,16,60),-4,3,-4,1);
-  addShape(new THREE.DodecahedronGeometry(0.9,0),5.5,-3,-6,1);
+  // ---- thematic node network (AI / data connections) ----
+  var netGroup=new THREE.Group();netGroup.position.set(2.4,0.4,-1);scene.add(netGroup);
+  var NODES=isMobile?10:16,nodeVecs=[],nodeMat=new THREE.MeshBasicMaterial({color:0xE63E52});
+  for(var ni=0;ni<NODES;ni++){
+    var nx=(Math.random()*2-1)*6.4,ny=(Math.random()*2-1)*4.2,nz=(Math.random()*2-1)*4;
+    var nm=new THREE.Mesh(new THREE.SphereGeometry(0.10+Math.random()*0.13,12,12),nodeMat);
+    nm.position.set(nx,ny,nz);netGroup.add(nm);
+    var halo=new THREE.Mesh(new THREE.SphereGeometry(0.26,10,10),fresnelMat(0xE63E52,0.5));halo.position.set(nx,ny,nz);netGroup.add(halo);
+    nodeVecs.push(new THREE.Vector3(nx,ny,nz));
+  }
+  var lp=[];
+  for(var a=0;a<NODES;a++){for(var b=a+1;b<NODES;b++){if(nodeVecs[a].distanceTo(nodeVecs[b])<4.0){lp.push(nodeVecs[a].x,nodeVecs[a].y,nodeVecs[a].z,nodeVecs[b].x,nodeVecs[b].y,nodeVecs[b].z);}}}
+  var lgeo=new THREE.BufferGeometry();lgeo.setAttribute('position',new THREE.BufferAttribute(new Float32Array(lp),3));
+  var netLines=new THREE.LineSegments(lgeo,new THREE.LineBasicMaterial({color:0xE63E52,transparent:true,opacity:0.26}));netGroup.add(netLines);
 
   // ---- project monoliths (deeper, hoverable) ----
   var projGeos=[new THREE.IcosahedronGeometry(2,1),new THREE.OctahedronGeometry(1.8,1),new THREE.TorusKnotGeometry(1.2,0.4,120,16)];
   var projData=[{n:'StorePilot',u:'https://github.com/RaghavSathishmohan/StorePilotRebuild'},{n:'LeadFast',u:'https://github.com/RaghavSathishmohan/fastlead'},{n:'career-ops',u:'https://github.com/RaghavSathishmohan/career-ops'}];
   var monoliths=[];
-  for(var j=0;j<3;j++){var m=new THREE.Mesh(projGeos[j],fresnelMat(0xFF2A3D,1.0));
+  for(var j=0;j<3;j++){var m=new THREE.Mesh(projGeos[j],fresnelMat(0xE63E52,1.0));
     m.position.set((j-1)*7,0,-30-j*2);m.userData=projData[j];m.userData.baseY=0;m.userData.ph=j*2;
-    var wf=new THREE.LineSegments(new THREE.WireframeGeometry(projGeos[j]),new THREE.LineBasicMaterial({color:0xFF2A3D,transparent:true,opacity:0.18}));m.add(wf);
+    var wf=new THREE.LineSegments(new THREE.WireframeGeometry(projGeos[j]),new THREE.LineBasicMaterial({color:0xE63E52,transparent:true,opacity:0.18}));m.add(wf);
     scene.add(m);monoliths.push(m);}
 
   // ---- interaction ----
@@ -411,7 +441,7 @@ footer .ac{color:var(--accent)}
     camera.lookAt(0,0,camera.position.z-10);
 
     particles.rotation.y=t*0.02;
-    for(var i=0;i<shapes.length;i++){var s=shapes[i];s.rotation.x+=s.userData.rot[0];s.rotation.y+=s.userData.rot[1];s.rotation.z+=s.userData.rot[2];s.position.y=s.userData.baseY+Math.sin(t*0.6+s.userData.ph)*0.4;}
+    netGroup.rotation.y+=0.0016;netGroup.rotation.x=Math.sin(t*0.18)*0.12;netGroup.position.y=0.4+Math.sin(t*0.4)*0.3;
 
     // monoliths rotate + hover test
     for(var k=0;k<monoliths.length;k++){var m=monoliths[k];m.rotation.y+=0.006;m.rotation.x+=0.003;m.position.y=Math.sin(t*0.5+m.userData.ph)*0.5;var ts=(hovered===m)?1.25:1;m.scale.x+=(ts-m.scale.x)*0.1;m.scale.y=m.scale.z=m.scale.x;}
