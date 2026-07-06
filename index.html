@@ -83,8 +83,9 @@ h2.title{font-family:var(--disp);font-size:clamp(28px,4.6vw,46px);font-weight:70
 .srow:last-child{border:none}.srow .k{color:var(--muted)}.srow .v{color:var(--accent);text-align:right}
 
 /* currently */
-.now{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-.now .n{padding:20px;position:relative;overflow:hidden}
+.now{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.now .n{padding:22px;position:relative;overflow:hidden;min-height:172px;display:flex;flex-direction:column}
+.now .n p{margin-top:2px}
 .now .n::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent)}
 .now .n .lab{font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .now .n .lab .live{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
@@ -200,10 +201,12 @@ footer .ac{color:var(--accent)}
 
 <section id="now" class="reveal">
   <div class="eyebrow">// currently</div>
+  <h2 class="title">What I'm up to right now.</h2>
   <div class="now">
-    <div class="glass n"><div class="lab"><span class="live"></span>building</div><p>Scaling <b>LeadFast</b>'s AI response pipeline — smarter retries, tighter grounding, faster onboarding.</p></div>
-    <div class="glass n"><div class="lab">exploring</div><p>Agentic workflows and <b>RAG-style grounding</b> — making LLM output something you can actually trust.</p></div>
-    <div class="glass n"><div class="lab">studying</div><p>B.S. Computer Science at <b>Rutgers</b>, plus whatever rabbit hole this week's build drags me into.</p></div>
+    <div class="glass n"><div class="lab"><span class="live"></span>building</div><p>Scaling <b>LeadFast</b>'s AI response pipeline — smarter retries, tighter grounding, and a faster onboarding flow for new clients.</p></div>
+    <div class="glass n"><div class="lab">exploring</div><p>Agentic workflows and <b>RAG-style grounding</b> — making LLM output something teams can actually trust in production.</p></div>
+    <div class="glass n"><div class="lab">studying</div><p>B.S. Computer Science at <b>Rutgers</b> — algorithms, databases, and systems, plus whatever rabbit hole this week's build drags me into.</p></div>
+    <div class="glass n"><div class="lab">open to</div><p>Summer &amp; Fall 2026 internships in software and applied AI. If you're building something interesting, <b>let's talk</b>.</p></div>
   </div>
 </section>
 
@@ -245,10 +248,12 @@ footer .ac{color:var(--accent)}
   <div class="eyebrow">// toolkit</div>
   <h2 class="title">Technologies I work with.</h2>
   <div class="skills-grid">
-    <div class="glass skill-cat"><h4>// languages</h4><div class="chips"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div></div>
-    <div class="glass skill-cat"><h4>// frontend</h4><div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Tailwind</span><span class="chip">Three.js</span></div></div>
-    <div class="glass skill-cat"><h4>// backend &amp; data</h4><div class="chips"><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span></div></div>
-    <div class="glass skill-cat"><h4>// applied AI</h4><div class="chips"><span class="chip">LLM APIs</span><span class="chip">RAG grounding</span><span class="chip">Prompt eng.</span><span class="chip">n8n</span></div></div>
+    <div class="glass skill-cat"><h4>// languages</h4><div class="chips"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">HTML/CSS</span></div></div>
+    <div class="glass skill-cat"><h4>// frontend</h4><div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Tailwind CSS</span><span class="chip">Framer Motion</span><span class="chip">Three.js</span><span class="chip">Responsive UI</span></div></div>
+    <div class="glass skill-cat"><h4>// backend &amp; data</h4><div class="chips"><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Data modeling</span></div></div>
+    <div class="glass skill-cat"><h4>// applied AI</h4><div class="chips"><span class="chip">LLM APIs</span><span class="chip">RAG grounding</span><span class="chip">Prompt engineering</span><span class="chip">Document processing</span><span class="chip">n8n</span></div></div>
+    <div class="glass skill-cat"><h4>// platform &amp; tools</h4><div class="chips"><span class="chip">Git</span><span class="chip">Stripe</span><span class="chip">Vercel</span><span class="chip">CI / deployment</span></div></div>
+    <div class="glass skill-cat"><h4>// practices</h4><div class="chips"><span class="chip">Multi-tenant architecture</span><span class="chip">Row-level security</span><span class="chip">RBAC</span><span class="chip">Rate limiting</span><span class="chip">Retry logic</span></div></div>
   </div>
 </section>
 
